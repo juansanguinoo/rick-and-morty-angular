@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CharactersModule } from './characters/characters.module';
 import { EpisodesModule } from './episodes/episodes.module';
 import { RouterModule } from '@angular/router';
+import { LocationsModule } from './locations/locations.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     EpisodesModule,
     RouterModule,
+    LocationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

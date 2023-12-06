@@ -1,0 +1,70 @@
+.locations-section {
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.banner img {
+  margin-top: 2rem;
+}
+
+.filter {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter input {
+  width: 50%;
+  height: 36%;
+  border-radius: 16px;
+  padding: 1rem;
+  font-family: cursive;
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.paginate {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginate button {
+  width: 100px;
+  height: 50px;
+  border-radius: 16px;
+  border: none;
+  background-color: rgb(92, 173, 74);
+  margin: 0 0.5rem;
+  cursor: pointer;
+  color: white;
+  font-family: cursive;
+  font-size: 1rem;
+}
+
+.paginate button:hover {
+  background-color: rgb(92, 173, 74, 0.8);
+}
