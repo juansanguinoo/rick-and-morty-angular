@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Character } from '../interfaces/character.interface';
+import { Character, Result } from '../interfaces/character.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -36,5 +36,9 @@ export class CharactersService {
     }
 
     return params;
+  }
+
+  getCharacterById(id: number): Observable<Result> {
+    return this.http.get<Result>(`${this.baseUrl}/api/character/${id}`);
   }
 }

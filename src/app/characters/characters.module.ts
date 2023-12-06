@@ -4,9 +4,14 @@ import { CharactersPageComponent } from './pages/characters-page/characters-page
 import { CharactersRoutingModule } from './characters-routing.module';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { FormsModule } from '@angular/forms';
+import { CharactersDetailsPageComponent } from './pages/characters-details-page/characters-details-page.component';
 
 @NgModule({
-  declarations: [CharactersPageComponent, CharacterCardComponent],
+  declarations: [
+    CharactersPageComponent,
+    CharacterCardComponent,
+    CharactersDetailsPageComponent,
+  ],
   imports: [CommonModule, CharactersRoutingModule, FormsModule],
 })
 export class CharactersModule {}
