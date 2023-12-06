@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { EpisodesService } from '../../services/episodes.service';
 import { Episode } from '../../interfaces/episodes.interface';
 import { catchError, forkJoin, switchMap, tap } from 'rxjs';
-import { Result } from 'src/app/characters/interfaces/character.interface';
+import { Character } from 'src/app/characters/interfaces/character.interface';
 import { CharactersService } from 'src/app/characters/services/characters.service';
 
 @Component({
@@ -17,9 +17,13 @@ export class EpisodesDetailsPageComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
   public episode: Episode = {} as Episode;
-  public characters: Result[] = [];
+  public characters: Character[] = [];
 
   ngOnInit(): void {
+    this.getEpisodeDetails();
+  }
+
+  getEpisodeDetails() {
     this.activatedRoute.params
       .pipe(
         switchMap(({ id }) => this.episodesService.getEpisodeById(id)),

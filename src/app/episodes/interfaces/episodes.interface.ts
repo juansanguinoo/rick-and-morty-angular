@@ -1,9 +1,9 @@
-export interface ApiResponse {
-  info: PageInfo;
+export interface ApiResponseEpisode {
+  info: Info;
   results: Episode[];
 }
 
-interface PageInfo {
+interface Info {
   count: number;
   pages: number;
   next: string | null;

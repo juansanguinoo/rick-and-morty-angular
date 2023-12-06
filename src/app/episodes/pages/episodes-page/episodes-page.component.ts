@@ -1,6 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { EpisodesService } from '../../services/episodes.service';
-import { ApiResponse, Episode } from '../../interfaces/episodes.interface';
+import {
+  ApiResponseEpisode,
+  Episode,
+} from '../../interfaces/episodes.interface';
 
 @Component({
   selector: 'app-episodes-page',
@@ -23,7 +26,7 @@ export class EpisodesPageComponent implements OnInit {
       this.nameFilter
     );
     this.episodesService.getEpisodes(params).subscribe({
-      next: (data: ApiResponse) => {
+      next: (data: ApiResponseEpisode) => {
         this.episodes = data.results;
         console.log(this.episodes);
       },
@@ -31,7 +34,7 @@ export class EpisodesPageComponent implements OnInit {
     });
   }
 
-  updateFilters(name?: string, status?: string, gender?: string) {
+  updateFilters(name?: string) {
     if (name !== undefined) this.nameFilter = name;
     this.fetchEpisodes();
   }
