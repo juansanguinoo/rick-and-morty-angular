@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Result } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-character-card',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./character-card.component.css'],
 })
 export class CharacterCardComponent {
-  @Input() character: any;
+  @Input() character: Result = {} as Result;
 }

@@ -1,0 +1,26 @@
+<div class="episodes-section">
+  <div class="banner">
+    <img src="../../../../assets/banner_1.jpeg" alt="rick-and-morty" />
+  </div>
+
+  <div class="filter">
+    <input
+      type="text"
+      placeholder="Filter by name"
+      [(ngModel)]="nameFilter"
+      (input)="updateFilters()"
+    />
+  </div>
+
+  <div class="card-container">
+    <app-episodes-card
+      *ngFor="let episode of episodes"
+      [episode]="episode"
+    ></app-episodes-card>
+  </div>
+
+  <div class="paginate">
+    <button (click)="onPrevPage()">Prev</button>
+    <button (click)="onNextPage()">Next</button>
+  </div>
+</div>
