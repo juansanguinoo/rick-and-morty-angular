@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LocationsService } from '../../services/locations.service';
 import { Location } from '../../interfaces/locations.interface';
-import { Result } from 'src/app/characters/interfaces/character.interface';
+import { Character } from 'src/app/characters/interfaces/character.interface';
 import { catchError, forkJoin, switchMap, tap } from 'rxjs';
 import { CharactersService } from 'src/app/characters/services/characters.service';
 
@@ -17,9 +17,13 @@ export class LocationsDetailsPageComponent implements OnInit {
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
   public location: Location = {} as Location;
-  public characters: Result[] = [];
+  public characters: Character[] = [];
 
   ngOnInit(): void {
+    this.getLocationsDetails();
+  }
+
+  getLocationsDetails() {
     this.activatedRoute.params
       .pipe(
         switchMap(({ id }) => this.locationsService.getLocationById(id)),

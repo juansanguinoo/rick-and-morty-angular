@@ -1,6 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { LocationsService } from '../../services/locations.service';
-import { ApiResponse, Location } from '../../interfaces/locations.interface';
+import {
+  ApiResponseLocation,
+  Location,
+} from '../../interfaces/locations.interface';
 
 @Component({
   selector: 'app-locations-page',
@@ -23,7 +26,7 @@ export class LocationsPageComponent implements OnInit {
       this.nameFilter
     );
     this.locationsService.getLocations(params).subscribe({
-      next: (data: ApiResponse) => {
+      next: (data: ApiResponseLocation) => {
         this.locations = data.results;
         console.log(this.locations);
       },
@@ -31,7 +34,7 @@ export class LocationsPageComponent implements OnInit {
     });
   }
 
-  updateFilters(name?: string, status?: string, gender?: string) {
+  updateFilters(name?: string) {
     if (name !== undefined) this.nameFilter = name;
     this.fetchLocations();
   }
