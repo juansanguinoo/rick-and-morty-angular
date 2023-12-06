@@ -5,7 +5,7 @@ import { LocationsRoutingModule } from './locations-routing.module';
 import { LocationCardComponent } from './components/location-card/location-card.component';
 import { FormsModule } from '@angular/forms';
 import { LocationsDetailsPageComponent } from './pages/locations-details-page/locations-details-page.component';
-import { CharactersModule } from '../characters/characters.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,11 +13,6 @@ import { CharactersModule } from '../characters/characters.module';
     LocationCardComponent,
     LocationsDetailsPageComponent,
   ],
-  imports: [
-    CommonModule,
-    LocationsRoutingModule,
-    FormsModule,
-    CharactersModule,
-  ],
+  imports: [CommonModule, LocationsRoutingModule, FormsModule, SharedModule],
 })
 export class LocationsModule {}

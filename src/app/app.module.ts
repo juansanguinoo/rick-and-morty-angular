@@ -8,6 +8,7 @@ import { CharactersModule } from './characters/characters.module';
 import { EpisodesModule } from './episodes/episodes.module';
 import { RouterModule } from '@angular/router';
 import { LocationsModule } from './locations/locations.module';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -18,6 +19,7 @@ import { LocationsModule } from './locations/locations.module';
     EpisodesModule,
     RouterModule,
     LocationsModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

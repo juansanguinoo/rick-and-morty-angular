@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Episode } from '../../interfaces/episodes.interface';
+import { Episode } from 'src/app/episodes/interfaces/episodes.interface';
 
 @Component({
   selector: 'app-episodes-card',

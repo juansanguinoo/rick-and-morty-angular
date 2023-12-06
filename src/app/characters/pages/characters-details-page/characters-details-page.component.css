@@ -4,12 +4,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.banner img {
-  margin-top: 1rem;
 }
 
 .card {
@@ -17,7 +12,7 @@
   height: 50%;
   border-radius: 1rem;
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 6rem;
 
   display: flex;
   justify-content: space-between;
@@ -74,11 +69,27 @@ span {
   margin-bottom: 8px;
 }
 
+.episodes {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.episodes h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: cursive;
+  color: gray;
+}
+
 .card-container {
   width: 100%;
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
   padding-bottom: 4rem;
 }
