@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CharactersService } from '../../services/characters.service';
 import { switchMap } from 'rxjs';
-import { Result } from '../../interfaces/character.interface';
+import { Character } from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-characters-details-page',
@@ -13,9 +13,13 @@ export class CharactersDetailsPageComponent implements OnInit {
   private charactersService = inject(CharactersService);
   private activatedRoute = inject(ActivatedRoute);
   private router = inject(Router);
-  public character: Result = {} as Result;
+  public character: Character = {} as Character;
 
   ngOnInit(): void {
+    this.getCharacterDetails();
+  }
+
+  getCharacterDetails() {
     this.activatedRoute.params
       .pipe(switchMap(({ id }) => this.charactersService.getCharacterById(id)))
       .subscribe((character) => {

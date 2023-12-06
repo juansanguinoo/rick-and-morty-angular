@@ -1,17 +1,21 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Character, Result } from '../interfaces/character.interface';
+import {
+  ApiResponseCharacter,
+  Character,
+} from '../interfaces/character.interface';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CharactersService {
-  private readonly baseUrl = 'https://rickandmortyapi.com/';
+  private readonly baseUrl = environment.baseUrl;
   private http = inject(HttpClient);
 
-  getCharacters(params: HttpParams): Observable<Character> {
-    return this.http.get<Character>(`${this.baseUrl}api/character`, {
+  getCharacters(params: HttpParams): Observable<ApiResponseCharacter> {
+    return this.http.get<ApiResponseCharacter>(`${this.baseUrl}api/character`, {
       params,
     });
   }
@@ -38,7 +42,7 @@ export class CharactersService {
     return params;
   }
 
-  getCharacterById(id: number): Observable<Result> {
-    return this.http.get<Result>(`${this.baseUrl}api/character/${id}`);
+  getCharacterById(id: number): Observable<Character> {
+    return this.http.get<Character>(`${this.baseUrl}api/character/${id}`);
   }
 }

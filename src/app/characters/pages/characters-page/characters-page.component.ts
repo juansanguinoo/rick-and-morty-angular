@@ -1,6 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CharactersService } from '../../services/characters.service';
-import { Character, Result } from '../../interfaces/character.interface';
+import {
+  ApiResponseCharacter,
+  Character,
+} from '../../interfaces/character.interface';
 
 @Component({
   selector: 'app-characters-page',
@@ -9,7 +12,7 @@ import { Character, Result } from '../../interfaces/character.interface';
 })
 export class CharactersPageComponent implements OnInit {
   private charactersService = inject(CharactersService);
-  public characters: Result[] = [];
+  public characters: Character[] = [];
   public currentPage: number = 1;
   public nameFilter: string = '';
   public statusFilter: string = '';
@@ -27,7 +30,7 @@ export class CharactersPageComponent implements OnInit {
       this.genderFilter
     );
     this.charactersService.getCharacters(params).subscribe({
-      next: (data: Character) => {
+      next: (data: ApiResponseCharacter) => {
         this.characters = data.results;
       },
       error: (error) => console.error(error),

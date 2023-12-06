@@ -5,7 +5,7 @@ interface Info {
   prev: null;
 }
 
-export interface Result {
+export interface Character {
   id: number;
   name: string;
   status: string;
@@ -25,7 +25,7 @@ interface Location {
   url: string;
 }
 
-export interface Character {
+export interface ApiResponseCharacter {
   info: Info;
-  results: Result[];
+  results: Character[];
 }

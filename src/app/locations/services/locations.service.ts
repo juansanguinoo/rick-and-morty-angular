@@ -2,12 +2,13 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiResponse, Location } from '../interfaces/locations.interface';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocationsService {
-  private readonly baseUrl = 'https://rickandmortyapi.com/';
+  private readonly baseUrl = environment.baseUrl;
   private http = inject(HttpClient);
 
   getLocations(params: HttpParams): Observable<ApiResponse> {
