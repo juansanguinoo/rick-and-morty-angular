@@ -1,0 +1,28 @@
+<div class="episodes-details">
+  <div class="title">
+    <h1>{{ episode.name }}</h1>
+  </div>
+
+  <div class="info">
+    <div class="episode">
+      <h3>Episode:</h3>
+      <span>{{ episode.episode }}</span>
+    </div>
+
+    <div class="air-date">
+      <h3>Date:</h3>
+      <span>{{ episode.air_date }}</span>
+    </div>
+  </div>
+
+  <div class="cast">
+    <h2>Cast</h2>
+  </div>
+
+  <div class="card-container">
+    <app-character-card
+      *ngFor="let character of characters"
+      [character]="character"
+    ></app-character-card>
+  </div>
+</div>

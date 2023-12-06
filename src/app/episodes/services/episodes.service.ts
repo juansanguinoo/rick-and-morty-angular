@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { ApiResponse } from '../interfaces/episodes.interface';
+import { ApiResponse, Episode } from '../interfaces/episodes.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -23,5 +23,9 @@ export class EpisodesService {
     }
 
     return params;
+  }
+
+  getEpisodeById(id: number): Observable<Episode> {
+    return this.http.get<Episode>(`${this.baseUrl}/api/episode/${id}`);
   }
 }

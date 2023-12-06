@@ -13,5 +13,6 @@ import { CharactersDetailsPageComponent } from './pages/characters-details-page/
     CharactersDetailsPageComponent,
   ],
   imports: [CommonModule, CharactersRoutingModule, FormsModule],
+  exports: [CharacterCardComponent],
 })
 export class CharactersModule {}
