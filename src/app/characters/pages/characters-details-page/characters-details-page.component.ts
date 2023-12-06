@@ -1,8 +1,9 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CharactersService } from '../../services/characters.service';
 import { switchMap } from 'rxjs';
+
 import { Character } from '../../interfaces/character.interface';
+import { CharactersService } from '../../services/characters.service';
 
 @Component({
   selector: 'app-characters-details-page',

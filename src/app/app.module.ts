@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { CharactersModule } from './characters/characters.module';
 import { EpisodesModule } from './episodes/episodes.module';
-import { RouterModule } from '@angular/router';
 import { LocationsModule } from './locations/locations.module';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CharactersModule,
     HttpClientModule,
-    EpisodesModule,
     RouterModule,
+    CharactersModule,
+    EpisodesModule,
     LocationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

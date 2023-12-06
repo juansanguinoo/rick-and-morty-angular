@@ -1,9 +1,10 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EpisodesService } from '../../services/episodes.service';
-import { Episode } from '../../interfaces/episodes.interface';
 import { catchError, forkJoin, switchMap, tap } from 'rxjs';
+
+import { Episode } from '../../interfaces/episodes.interface';
 import { Character } from 'src/app/characters/interfaces/character.interface';
+import { EpisodesService } from '../../services/episodes.service';
 import { CharactersService } from 'src/app/characters/services/characters.service';
 
 @Component({

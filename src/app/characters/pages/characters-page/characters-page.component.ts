@@ -1,4 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
+
 import { CharactersService } from '../../services/characters.service';
 import {
   ApiResponseCharacter,
