@@ -1,27 +1,18 @@
-# RickAndMorty
+# Rick And Morty
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+Este proyecto fue generado por [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm install` para instalar todas las dependencias que el proyecto necesite.
+Run `npm start` para levantar el servidor dev en el puerto `http://localhost:4200/`.
 
-## Code scaffolding
+He diseñado y desarrollado una aplicación web interactiva, utilizando la API de Rick and Morty. Esta aplicación, construida con Angular, permite a los usuarios explorar de forma intuitiva y dinámica personajes, locaciones y episodios de la serie.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Cada sección de la aplicación cuenta con paginación. Implementé un sistema de filtrado, donde los usuarios pueden buscar registros específicos por nombre, estado y género.
 
-## Build
+Vista detallada para cada registro, se puede profundizar en la información de personajes, locaciones y episodios.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Implemente pruebas unitarias, asegurando la fiabilidad de las llamadas a la API y manteniendo un alto estándar en la calidad del código. 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+En el frente de desarrollo, utilicé HTML y CSS nativo, centrándome en crear una interfaz de usuario agradable, que se adapta a diferentes dispositivos y tamaños de pantalla.
