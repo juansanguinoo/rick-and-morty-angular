@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { CharactersDetailsPageComponent } from './pages/characters-details-page/characters-details-page.component';
 

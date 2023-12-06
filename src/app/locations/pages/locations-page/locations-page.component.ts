@@ -1,5 +1,4 @@
 import { Component, OnInit, inject } from '@angular/core';
-
 import { LocationsService } from '../../services/locations.service';
 import {
   ApiResponseLocation,

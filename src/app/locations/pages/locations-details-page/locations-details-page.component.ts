@@ -1,11 +1,10 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, forkJoin, switchMap, tap } from 'rxjs';
-
+import { LocationsService } from '../../services/locations.service';
 import { Location } from '../../interfaces/locations.interface';
 import { Character } from 'src/app/characters/interfaces/character.interface';
+import { catchError, forkJoin, switchMap, tap } from 'rxjs';
 import { CharactersService } from 'src/app/characters/services/characters.service';
-import { LocationsService } from '../../services/locations.service';
 
 @Component({
   selector: 'app-locations-details-page',

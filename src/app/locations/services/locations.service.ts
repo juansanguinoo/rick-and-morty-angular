@@ -1,12 +1,11 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-
-import { environment } from 'src/environments/environments';
 import {
   ApiResponseLocation,
   Location,
 } from '../interfaces/locations.interface';
+import { environment } from 'src/environments/environments';
 
 @Injectable({
   providedIn: 'root',
