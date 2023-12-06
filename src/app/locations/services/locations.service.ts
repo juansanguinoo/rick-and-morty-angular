@@ -11,7 +11,7 @@ export class LocationsService {
   private http = inject(HttpClient);
 
   getLocations(params: HttpParams): Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(`${this.baseUrl}/api/location`, {
+    return this.http.get<ApiResponse>(`${this.baseUrl}api/location`, {
       params,
     });
   }
@@ -26,6 +26,6 @@ export class LocationsService {
   }
 
   getLocationById(id: string): Observable<Location> {
-    return this.http.get<Location>(`${this.baseUrl}/api/location/${id}`);
+    return this.http.get<Location>(`${this.baseUrl}api/location/${id}`);
   }
 }

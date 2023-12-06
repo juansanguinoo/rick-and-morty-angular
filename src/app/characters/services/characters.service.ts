@@ -11,7 +11,7 @@ export class CharactersService {
   private http = inject(HttpClient);
 
   getCharacters(params: HttpParams): Observable<Character> {
-    return this.http.get<Character>(`${this.baseUrl}/api/character`, {
+    return this.http.get<Character>(`${this.baseUrl}api/character`, {
       params,
     });
   }
@@ -39,6 +39,6 @@ export class CharactersService {
   }
 
   getCharacterById(id: number): Observable<Result> {
-    return this.http.get<Result>(`${this.baseUrl}/api/character/${id}`);
+    return this.http.get<Result>(`${this.baseUrl}api/character/${id}`);
   }
 }

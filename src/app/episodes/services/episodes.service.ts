@@ -11,7 +11,7 @@ export class EpisodesService {
   private http = inject(HttpClient);
 
   getEpisodes(params: HttpParams): Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(`${this.baseUrl}/api/episode`, {
+    return this.http.get<ApiResponse>(`${this.baseUrl}api/episode`, {
       params,
     });
   }
@@ -26,6 +26,6 @@ export class EpisodesService {
   }
 
   getEpisodeById(id: number): Observable<Episode> {
-    return this.http.get<Episode>(`${this.baseUrl}/api/episode/${id}`);
+    return this.http.get<Episode>(`${this.baseUrl}api/episode/${id}`);
   }
 }
