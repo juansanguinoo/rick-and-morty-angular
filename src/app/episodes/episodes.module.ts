@@ -5,7 +5,6 @@ import { EpisodesPageComponent } from './pages/episodes-page/episodes-page.compo
 import { EpisodesCardComponent } from './components/episodes-card/episodes-card.component';
 import { FormsModule } from '@angular/forms';
 import { EpisodesDetailsPageComponent } from './pages/episodes-details-page/episodes-details-page.component';
-import { CharacterCardComponent } from '../characters/components/character-card/character-card.component';
 import { CharactersModule } from '../characters/characters.module';
 
 @NgModule({
@@ -15,5 +14,6 @@ import { CharactersModule } from '../characters/characters.module';
     EpisodesDetailsPageComponent,
   ],
   imports: [CommonModule, EpisodesRoutingModule, FormsModule, CharactersModule],
+  exports: [EpisodesCardComponent],
 })
 export class EpisodesModule {}

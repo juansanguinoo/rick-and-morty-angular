@@ -29,6 +29,7 @@
 .logo img {
   width: 100%;
   height: 90%;
+  cursor: pointer;
 }
 
 .items ul {
@@ -36,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   font-size: 1rem;
   font-weight: bold;
   font-family: cursive;
@@ -50,9 +51,15 @@
   color: rgb(92, 173, 74);
 }
 
+.active-link {
+  color: rgb(92, 173, 74);
+}
+
 .main-section {
   width: 100%;
-  height: calc(100vh - 80px);
+  min-height: 100vh;
+  height: calc(100% - 80px);
+  background-color: #f7f7f7;
 
   display: flex;
   justify-content: center;

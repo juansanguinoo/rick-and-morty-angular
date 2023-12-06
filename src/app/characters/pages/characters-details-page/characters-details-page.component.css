@@ -9,7 +9,7 @@
 }
 
 .banner img {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .card {
@@ -72,4 +72,13 @@ span {
   font-family: cursive;
   color: #081f32;
   margin-bottom: 8px;
+}
+
+.card-container {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 4rem;
 }

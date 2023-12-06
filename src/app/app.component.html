@@ -1,13 +1,17 @@
 <header class="header">
   <div class="content">
     <div class="logo">
-      <img src="../assets/logo.jpeg" alt="logo" />
+      <img src="../assets/logo.jpeg" alt="logo" routerLink="/characters" />
     </div>
     <div class="items">
       <ul>
-        <li routerLink="/characters">Characters</li>
-        <li routerLink="/locations">Locations</li>
-        <li routerLink="/episodes">Episodes</li>
+        <li routerLink="/characters" routerLinkActive="active-link">
+          Characters
+        </li>
+        <li routerLink="/locations" routerLinkActive="active-link">
+          Locations
+        </li>
+        <li routerLink="/episodes" routerLinkActive="active-link">Episodes</li>
       </ul>
     </div>
   </div>

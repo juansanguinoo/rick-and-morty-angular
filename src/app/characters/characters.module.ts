@@ -5,6 +5,7 @@ import { CharactersRoutingModule } from './characters-routing.module';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { FormsModule } from '@angular/forms';
 import { CharactersDetailsPageComponent } from './pages/characters-details-page/characters-details-page.component';
+import { EpisodesModule } from '../episodes/episodes.module';
 
 @NgModule({
   declarations: [
