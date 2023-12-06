@@ -67,3 +67,19 @@
   margin-left: 1rem;
   font-family: cursive;
 }
+
+@media (max-width: 768px) {
+  .card {
+    height: auto;
+  }
+  .card-content {
+    flex-direction: column;
+  }
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+  .card-body {
+    width: 100%;
+  }
+}

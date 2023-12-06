@@ -70,3 +70,21 @@
   width: 70%;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .logo {
+    display: none;
+  }
+
+  .items ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .container {
+    width: 95%;
+  }
+}

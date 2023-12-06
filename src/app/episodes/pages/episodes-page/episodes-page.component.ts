@@ -28,7 +28,6 @@ export class EpisodesPageComponent implements OnInit {
     this.episodesService.getEpisodes(params).subscribe({
       next: (data: ApiResponseEpisode) => {
         this.episodes = data.results;
-        console.log(this.episodes);
       },
       error: (error) => console.error(error),
     });

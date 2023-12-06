@@ -28,7 +28,6 @@ export class LocationsPageComponent implements OnInit {
     this.locationsService.getLocations(params).subscribe({
       next: (data: ApiResponseLocation) => {
         this.locations = data.results;
-        console.log(this.locations);
       },
       error: (error) => console.error(error),
     });
