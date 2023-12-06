@@ -72,16 +72,25 @@
   background-color: rgb(92, 173, 74, 0.8);
 }
 
+@media (max-width: 1200px) {
+  .filter {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .filter select {
+    width: 40% !important;
+  }
+}
+
 @media (max-width: 768px) {
   .banner {
     display: none;
   }
   .filter {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
     margin-top: 5rem;
-    gap: 1rem;
   }
   .filter input {
     width: 80%;

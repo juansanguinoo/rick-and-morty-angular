@@ -92,3 +92,24 @@ span {
   gap: 2rem;
   padding-bottom: 4rem;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 80%;
+    flex-direction: column;
+    height: auto;
+  }
+  .avatar,
+  .card-body {
+    width: 100%;
+  }
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
