@@ -1,0 +1,84 @@
+.locations-details {
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  height: 100px;
+  margin-top: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: cursive;
+  color: #081f32;
+}
+
+.info {
+  width: 70%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.episode,
+.air-date {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.episode h3,
+.air-date h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: cursive;
+  color: #081f32;
+}
+
+.episode span,
+.air-date span {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: cursive;
+  color: #081f32;
+  margin: 0;
+}
+
+.cast {
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.cast h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: cursive;
+  color: gray;
+}
+
+.card-container {
+  width: 100%;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 4rem;
+}

@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiResponse } from '../interfaces/locations.interface';
+import { ApiResponse, Location } from '../interfaces/locations.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -23,5 +23,9 @@ export class LocationsService {
     }
 
     return params;
+  }
+
+  getLocationById(id: string): Observable<Location> {
+    return this.http.get<Location>(`${this.baseUrl}/api/location/${id}`);
   }
 }
