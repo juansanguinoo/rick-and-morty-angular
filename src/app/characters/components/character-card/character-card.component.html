@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-content">
+    <div class="card-img">
+      <img [src]="character.image" alt="" />
+    </div>
+    <div class="card-body">
+      <div class="info">
+        <h3>{{ character.name }}</h3>
+        <p>{{ character.status }} - {{ character.species }}</p>
+      </div>
+
+      <div class="location">
+        <h3>Last known location:</h3>
+        <p>{{ character.location.name }}</p>
+      </div>
+
+      <div class="first-seen">
+        <h3>Origin:</h3>
+        <p>{{ character.origin.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
